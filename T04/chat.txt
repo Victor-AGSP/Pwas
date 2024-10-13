@@ -1,0 +1,179 @@
+Mi aplicacion se basa en el mapa de chile y sus regiones, estas estan representadas con un punto rojo y
+su nombre correspondiente al lado, al hacer click sobre algún punto se hara zoom a la region correspondiente y
+aparecera información de la misma, para salir de la visualización de la información hay un boton que dice salir.
+
+Enlace al chat:
+https://chatgpt.com/share/670bd20a-0630-800d-85de-04c6c306e9f8
+
+Chat con GTP............
+
+Estoy trabajando con P5.js en processing, necesito una ventana donde se pueda visualizar el mapa de chile
+y a su vez se muestren diversos puntos a lo largo del mismo, estos puntos hacen referencia a las ciudades de chile
+
+----------------------------------------------------------------------
+
+cambia las ciudades por las regions, todas las regiones de chile
+
+----------------------------------------------------------------------
+
+mi imagen es de 163 x 980 para que calcules mas o menos donde deberian de estar
+
+----------------------------------------------------------------------
+
+ya, quiero que al lado de cada punto aparezca un linea no tan larga y alfinal de esta linea aparezca 
+el nombre de cada region correspodientemente, a su vez quiero que si se pasa el mouse sobre algun punto
+este crezca un poco junto con el nombre que le acompaña
+
+----------------------------------------------------------------------
+
+arregla el codigo, ahora la imagen se ve rara y al pasar el mouse sobre un punto el texto anterior
+todabia se ve y pareciera que se duplica
+
+----------------------------------------------------------------------
+
+esta bien ahora, pero el texto sale cortado, no se visualiza completamente y al crecer el mismo tambien,
+pareciera que se salen de la pantalla pero no se ve completo
+
+----------------------------------------------------------------------
+
+dejalos como estaban, quiero que la ventana sea mas grande para que el texto no se corte
+
+----------------------------------------------------------------------
+
+ajuste las coordenadas para que calzaran con mi imagen, estas son:
+let regiones = [
+  { nombre: 'Arica y Parinacota', x: 105, y: 20 },
+  { nombre: 'Tarapacá', x: 110, y: 70 },
+  { nombre: 'Antofagasta', x: 120, y: 140 },
+  { nombre: 'Atacama', x: 100, y: 240 },
+  { nombre: 'Coquimbo', x: 80, y: 330 },
+  { nombre: 'Valparaíso', x: 80, y: 380 },
+  { nombre: 'Metropolitana', x: 80, y: 405 },
+  { nombre: 'O’Higgins', x: 75, y: 430 },
+  { nombre: 'Maule', x: 65, y: 460 },
+  { nombre: 'Biobío', x: 55, y: 495 },
+  { nombre: 'La Araucanía', x: 55, y: 535 },
+  { nombre: 'Los Ríos', x: 50, y: 570 },
+  { nombre: 'Los Lagos', x: 55, y: 620 },
+  { nombre: 'Aysén', x: 50, y: 730 },
+  { nombre: 'Magallanes', x: 50, y: 860 }
+];
+ademas quiero que cuando se presione sobre algun punto que hace referencia a una region se haga zoom,
+se debe de visualizar, la hacer zoom, un campo de texto con su nombre y una descripcion en particular.
+para salir del zoom se debe hacer click en un boton que diga salir
+
+----------------------------------------------------------------------
+
+quiero que el nombre de cadad region este al terminar la linea de cada punto, correspondientemente,
+y que al hacer zoom, no desaparezca el mapa
+
+----------------------------------------------------------------------
+
+ajusta la ventana, lo que aparece al hacer click en un punto tapa el mapa y quiero que a su vez al
+hacer click en una region, pararezca el zoom a esa region junto a la descripcion
+
+----------------------------------------------------------------------
+
+el zoom se le debe hacer a la imgane en esa region y el boton de salir debe de estar abajo de cada descripcion
+
+----------------------------------------------------------------------
+
+el zoom que se haga que sea sobre la misma imagen, pero que el punto se mantenga donde sale en un inicio, 
+a que voy, el zoom que esta implementando hace que la imagen crezca y la region con el punto quedan alejados
+de su descripcion al hacer zoom
+
+----------------------------------------------------------------------
+
+esta mejor, pero cuando llego a la region del biobio ya el punto y la misma region no se visualizan
+
+----------------------------------------------------------------------
+
+esta muy bien, quiero que el titulo y descripcion salgan siempre en el centro y mas a la derecha
+
+----------------------------------------------------------------------
+
+ahora quiero que el zoom se muestre mas a la izquierda, ya que tapa las letras de la descripcion
+
+----------------------------------------------------------------------
+
+el zoom junto al titulo y descripcion se ven amontonados, mueve donde aparece el zoom mas a la izquierda,
+dejalo en el borde de ser necesario
+
+----------------------------------------------------------------------
+
+intercambia las posiciones del zoom y la informacion de la region
+
+----------------------------------------------------------------------
+
+lo entendiste mal, quiero que el zoom se visualice en la parte izquierda y en la derecha coloca el titulo y
+la descripcion centrados
+
+----------------------------------------------------------------------
+
+ya mira, cuando se haga el zoom, mueve lo que se visualiza para la ixquierda ya que opcaca la descripcion
+
+----------------------------------------------------------------------
+
+que sea poco mas a la izquierda, ya que cuando le hago zoom a algunas regiones tapan la descripcion o el boton
+
+----------------------------------------------------------------------
+
+quiero que ahora aparte de la descripcion se muestren las ciudades de cada region al hacer
+click en la region correspondiente
+
+----------------------------------------------------------------------
+
+Agrega todas estas ciudades:
+N.º	Denominación	Región	Habitantes (2023)3​
+5	Antofagasta (C)	Antofagasta	441 211
+14	Calama	Antofagasta	195 423
+6	Gran Temuco (C)	Araucanía	392 794
+36	Villarrica	Araucanía	60 327
+39	Angol	Araucanía	56 644
+11	Arica (C)	Arica y Parinacota	255 195
+19	Copiapó (C)	Atacama	175 240
+37	Vallenar	Atacama	57 338
+35	Coyhaique (C)	Aysén	61 885
+3	Gran Concepción (C)	Biobío	1 036 142
+13	Los Ángeles	Biobío	222 593
+4	Gran La Serena (C)	Coquimbo	534 239
+25	Ovalle	Coquimbo	123 724
+9	Gran Puerto Montt (C)	Los Lagos	328 924
+18	Osorno	Los Lagos	175 670
+17	Valdivia (C)	Los Ríos	180 848
+22	Punta Arenas (C)	Magallanes	148 391
+10	Talca (C)	Maule	307 931
+20	Curicó	Maule	169 681
+28	Linares	Maule	103 303
+41	Constitución	Maule	51 539
+43	Cauquenes	Maule	50 985
+44	San Javier	Maule	50 601
+8	Gran Rancagua (C)	O'Higgins	335 932
+33	San Fernando	O'Higgins	80 547
+34	Rengo	O'Higgins	65 318
+40	San Vicente	O'Higgins	51 910
+1	Gran Santiago (C)	Santiago	7 116 706
+15	Colina	Santiago	193 594
+21	Melipilla	Santiago	147 275
+23	Lampa	Santiago	139 266
+26	Buin	Santiago	116 032
+27	Peñaflor	Santiago	105 498
+29	Paine	Santiago	87 059
+32	Talagante	Santiago	84 670
+7	Gran Iquique (C)	Tarapacá	370 877
+2	Gran Valparaíso (C)	Valparaíso	1 054 253
+16	Gran Quillota	Valparaíso	181 330
+24	Gran San Antonio	Valparaíso	137 277
+30	Los Andes-Calle Larga	Valparaíso	86 176
+31	San Felipe	Valparaíso	86 082
+42	Limache	Valparaíso	51 289
+tomando solo el nombre de la ciudad y region, los otros datos no son necesarios,
+te paso esta informacion solo para que coloques el resto de ciudades importantes
+
+----------------------------------------------------------------------
+
+haz mas bonita la presentacion de las regiones
+
+----------------------------------------------------------------------
+
+deja el boton de salir abajo de los datos de la region, pero centrado con la misma
